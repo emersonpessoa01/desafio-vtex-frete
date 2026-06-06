@@ -1,0 +1,23 @@
+{
+  "vendor": "partnersigrowdev",
+  "name": "shipping-simulation-app",
+  "version": "0.0.0",
+  "title": "Shipping Simulation",
+  "description": "Shipping simulation app",
+  "builders": {
+    "react": "3.x",
+    "styles": "2.x",
+    "assets": "0.x",
+    "store": "0.x"
+  },
+  "dependencies": {
+    "vtex.product-context": "0.x",
+    "vtex.order-manager": "0.x"
+  },
+  "peerDependencies": {},
+  "registries": [
+    "smartcheckout"
+  ],
+  "policies": [],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
