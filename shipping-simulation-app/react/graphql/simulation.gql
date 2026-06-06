@@ -1,0 +1,16 @@
+query simulation($id: ID!, $postalCode: String!) {
+  simulation(itemId: $id, country: "BRA", postalCode: $postalCode) {
+    logisticsInfo {
+      itemIndex
+      shippingEstimate
+      shippingEstimateDate
+      deliveryChannel
+      slas {
+        id
+        name
+        price
+        shippingEstimate
+      }
+    }
+  }
+}

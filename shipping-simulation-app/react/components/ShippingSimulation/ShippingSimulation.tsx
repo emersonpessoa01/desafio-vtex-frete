@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import { useOrderForm } from "vtex.order-manager/OrderForm";
 
 const ShippingSimulation = () => {
   const [cep, setCep] = useState("");
+
+  const { orderForm } = useOrderForm();
+  console.log("Order Form: ", orderForm);
 
   const handleCalculate = () => {
     console.log("O CEP digtado foi: ", cep);
@@ -15,7 +19,9 @@ const ShippingSimulation = () => {
         placeholder="Digite o CEP"
         onChange={(e) => setCep(e.target.value)}
       />
-      <button type="submit" onClick={handleCalculate}>Calculate</button>
+      <button type="submit" onClick={handleCalculate}>
+        Calculate
+      </button>
     </div>
   );
 };

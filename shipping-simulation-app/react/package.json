@@ -22,11 +22,11 @@
     "apollo-cache-inmemory": "^1.6.5",
     "eslint": "7.32.0",
     "graphql": "^14.6.0",
+    "partnersigrowdev.shipping-simulation-app": "https://emersonpessoadev2--partnersigrowdev.myvtex.com/_v/private/typings/linked/v1/partnersigrowdev.shipping-simulation-app@0.0.0+build1780769883/public/@types/partnersigrowdev.shipping-simulation-app",
     "typescript": "3.9.7",
-    "vtex.css-handles": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.0.1/public/@types/vtex.css-handles",
+    "vtex.order-manager": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-manager@0.12.0/public/@types/vtex.order-manager",
     "vtex.product-context": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.1/public/@types/vtex.product-context",
-    "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.136.2/public/@types/vtex.render-runtime",
-    "vtex.store-graphql": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.177.2/public/@types/vtex.store-graphql"
+    "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.136.2/public/@types/vtex.render-runtime"
   },
   "resolutions": {
     "@types/jest": "26.0.15"

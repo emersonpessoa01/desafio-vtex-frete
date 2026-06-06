@@ -1,15 +1,15 @@
-declare module '*.gql' {
-  import { DocumentNode } from 'graphql'
+declare module "*.gql" {
+  import { DocumentNode } from "graphql";
 
-  const Schema: DocumentNode
+  const Schema: DocumentNode;
 
-  export default Schema
+  export default Schema;
 }
 
-declare module '*.graphql' {
-  import { DocumentNode } from 'graphql'
+declare module "*.graphql" {
+  import { DocumentNode } from "graphql";
 
-  const schema: DocumentNode
+  const schema: DocumentNode;
 
-  export default schema
+  export default schema;
 }
