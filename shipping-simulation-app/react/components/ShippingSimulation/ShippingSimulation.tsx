@@ -46,21 +46,23 @@ const ShippingSimulation = () => {
     }
 
     // Itens do carrinho convertidos para o formato da query
+    // 1. Mapeia os itens que já estão no carrinho (orderForm)
     const cartItems = (orderForm?.items ?? []).map((item: any) => ({
       id: item.id,
       quantity: item.quantity,
       seller: item.seller ?? "1"
     }));
 
-    // SKU atual da PDP
+    // 2. Isola o item que está sendo visualizado agora na PDP
     const pdpItem = { id: itemId, quantity: 1, seller: sellerId };
 
-    // Se o item da PDP já está no carrinho, usa só o carrinho. Senão, adiciona.
+    // 3. Lógica de combinação: Se o item da PDP já existe no carrinho, envia apenas o carrinho.
+    // Se não existe, cria um novo array que junta tudo para a simulação correta.
     const items = cartItems.some((i: any) => i.id === pdpItem.id)
       ? cartItems
       : [...cartItems, pdpItem];
 
-    // Dispara a query com todos os itens + CEP
+    // 4. Dispara a query enviando essa lista consolidada
     getSimulation({
       variables: {
         items,
@@ -68,7 +70,6 @@ const ShippingSimulation = () => {
         country: "BRA"
       }
     });
-
     setCep("");
   };
 
