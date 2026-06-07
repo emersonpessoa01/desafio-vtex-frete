@@ -1,0 +1,23 @@
+query GET_SHIPPING_INFO(
+  $items: [ShippingItem]
+  $postalCode: String
+  $country: String
+) {
+  shipping(
+    items: $items
+    postalCode: $postalCode
+    country: $country
+  ) {
+    logisticsInfo {
+      itemIndex
+      selectedSla
+      slas {
+        id
+        name
+        price
+        shippingEstimate
+        friendlyName
+      }
+    }
+  }
+}
