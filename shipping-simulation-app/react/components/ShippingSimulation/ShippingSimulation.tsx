@@ -43,6 +43,7 @@ const ShippingSimulation = () => {
   return (
     <div style={container}>
       <input
+        style={containerInput}
         autoFocus
         type="text"
         maxLength={8}
@@ -52,7 +53,7 @@ const ShippingSimulation = () => {
         onKeyDown={(e) => e.key === "Enter" && handleCalculate()}
       />
       <button
-        style={containerButton}
+        style={containerButton(loading)}
         onClick={handleCalculate}
         disabled={loading}
       >
@@ -104,19 +105,19 @@ const containerInput: React.CSSProperties = {
   padding: "8px",
   border: "1px solid #ccc",
   borderRadius: "4px",
-  outline: "none",
-  transition: "all 0.3s ease-in-out"
+  outline: "none"
 };
-const containerButton: React.CSSProperties = {
+const containerButton = (isLoading: boolean): React.CSSProperties => ({
   padding: "8px",
-  backgroundColor: "#0f3e99",
+  backgroundColor: isLoading ? "#ccc" : "#0f3e99",
   color: "#fff",
   border: "none",
   borderRadius: "4px",
-  cursor: "pointer",
+  cursor: isLoading ? "not-allowed" : "pointer",
   fontSize: "16px",
-  textTransform: "uppercase"
-};
+  textTransform: "uppercase",
+  transition: "background-color 0.3s ease-in-out"
+});
 const slaStyle: React.CSSProperties = {
   padding: "8px",
   background: "#fff",
